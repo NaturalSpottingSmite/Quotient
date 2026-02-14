@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/dbaseqp/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
 )
 
 func GetTeams(w http.ResponseWriter, r *http.Request) {

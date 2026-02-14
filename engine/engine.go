@@ -13,9 +13,9 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/dbaseqp/Quotient/engine/checks"
-	"github.com/dbaseqp/Quotient/engine/config"
-	"github.com/dbaseqp/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/engine/checks"
+	"github.com/NaturalSpottingSmite/Quotient/engine/config"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
 
 	"github.com/redis/go-redis/v9"
 )

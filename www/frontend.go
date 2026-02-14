@@ -6,8 +6,8 @@ import (
 	"slices"
 	"text/template"
 
-	"github.com/dbaseqp/Quotient/engine/db"
-	"github.com/dbaseqp/Quotient/www/api"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/www/api"
 )
 
 var (

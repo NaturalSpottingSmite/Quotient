@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"regexp"
 
-	"github.com/dbaseqp/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
 )
 
 var validIdentifierRegex = regexp.MustCompile(`^[0-9]{1,3}$`)

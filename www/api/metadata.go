@@ -3,7 +3,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/dbaseqp/Quotient/engine/checks"
+	"github.com/NaturalSpottingSmite/Quotient/engine/checks"
 )
 
 type BoxMetadata struct {

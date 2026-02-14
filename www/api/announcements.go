@@ -10,7 +10,7 @@ import (
 	"slices"
 	"time"
 
-	"github.com/dbaseqp/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
 
 	"gorm.io/gorm"
 )

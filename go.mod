@@ -1,4 +1,4 @@
-module github.com/dbaseqp/Quotient
+module github.com/NaturalSpottingSmite/Quotient
 
 go 1.25.1
 

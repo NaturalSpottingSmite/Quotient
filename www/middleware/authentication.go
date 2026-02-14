@@ -6,7 +6,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/dbaseqp/Quotient/www/api"
+	"github.com/NaturalSpottingSmite/Quotient/www/api"
 )
 
 // load in authentication sources

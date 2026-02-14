@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/dbaseqp/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
 )
 
 func CreateSubmission(w http.ResponseWriter, r *http.Request) {

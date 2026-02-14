@@ -6,10 +6,10 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/dbaseqp/Quotient/engine"
-	"github.com/dbaseqp/Quotient/engine/config"
-	"github.com/dbaseqp/Quotient/engine/db"
-	"github.com/dbaseqp/Quotient/www"
+	"github.com/NaturalSpottingSmite/Quotient/engine"
+	"github.com/NaturalSpottingSmite/Quotient/engine/config"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/www"
 )
 
 var logLvels = map[string]slog.Level{

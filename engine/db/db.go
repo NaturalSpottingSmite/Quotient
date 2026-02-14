@@ -7,7 +7,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/dbaseqp/Quotient/engine/config"
+	"github.com/NaturalSpottingSmite/Quotient/engine/config"
 
 	"github.com/go-ldap/ldap/v3"
 	"gorm.io/driver/postgres"

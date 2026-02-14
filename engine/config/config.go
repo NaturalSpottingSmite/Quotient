@@ -10,7 +10,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/dbaseqp/Quotient/engine/checks"
+	"github.com/NaturalSpottingSmite/Quotient/engine/checks"
 
 	"github.com/BurntSushi/toml"
 )

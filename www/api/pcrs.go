@@ -8,7 +8,7 @@ import (
 	"slices"
 	"strconv"
 
-	"github.com/dbaseqp/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
 )
 
 func GetCredlists(w http.ResponseWriter, r *http.Request) {

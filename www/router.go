@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/dbaseqp/Quotient/engine"
-	"github.com/dbaseqp/Quotient/engine/config"
-	"github.com/dbaseqp/Quotient/www/api"
-	"github.com/dbaseqp/Quotient/www/middleware"
+	"github.com/NaturalSpottingSmite/Quotient/engine"
+	"github.com/NaturalSpottingSmite/Quotient/engine/config"
+	"github.com/NaturalSpottingSmite/Quotient/www/api"
+	"github.com/NaturalSpottingSmite/Quotient/www/middleware"
 )
 
 type Router struct {

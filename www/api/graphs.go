@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"slices"
 
-	"github.com/dbaseqp/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
 )
 
 const (

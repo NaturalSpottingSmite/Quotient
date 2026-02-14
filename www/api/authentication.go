@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dbaseqp/Quotient/engine/config"
+	"github.com/NaturalSpottingSmite/Quotient/engine/config"
 
 	"github.com/go-ldap/ldap/v3"
 	"github.com/gorilla/securecookie"

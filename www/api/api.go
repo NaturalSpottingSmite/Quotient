@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/dbaseqp/Quotient/engine"
-	"github.com/dbaseqp/Quotient/engine/config"
-	"github.com/dbaseqp/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/engine"
+	"github.com/NaturalSpottingSmite/Quotient/engine/config"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
 )
 
 var (

@@ -8,7 +8,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/dbaseqp/Quotient/engine/db"
+	"github.com/NaturalSpottingSmite/Quotient/engine/db"
 )
 
 func GetRed(w http.ResponseWriter, r *http.Request) {
