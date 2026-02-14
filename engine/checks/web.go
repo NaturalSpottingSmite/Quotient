@@ -18,11 +18,11 @@ import (
 
 type Web struct {
 	Service
-	Url    []urlData
+	Url    []UrlData
 	Scheme string
 }
 
-type urlData struct {
+type UrlData struct {
 	Path        string
 	Status      int    `toml:",omitempty"`
 	Diff        int    `toml:",omitempty"`
@@ -86,10 +86,10 @@ func (c Web) Run(teamID uint, teamIdentifier string, roundID uint, resultsChan c
 		}
 
 		defer func() {
-		if err := resp.Body.Close(); err != nil {
-			slog.Error("failed to close http response body", "error", err)
-		}
-	}()
+			if err := resp.Body.Close(); err != nil {
+				slog.Error("failed to close http response body", "error", err)
+			}
+		}()
 		body, err := io.ReadAll(resp.Body)
 		if err != nil {
 			checkResult.Error = "error reading page content"

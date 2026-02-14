@@ -16,7 +16,7 @@ func TestPropertyVerifyPortDefaults(t *testing.T) {
 
 		webCheck := &Web{
 			Scheme: scheme,
-			Url:    []urlData{{Path: "/"}},
+			Url:    []UrlData{{Path: "/"}},
 			// Port intentionally 0 (should be set by Verify)
 		}
 
@@ -116,7 +116,7 @@ func TestPropertyRunnablePastStopTimeBlocks(t *testing.T) {
 
 		service := &Service{
 			Disabled:   false,
-			LaunchTime: time.Now().Add(-2000 * time.Second), // Launched long ago
+			LaunchTime: time.Now().Add(-2000 * time.Second),                       // Launched long ago
 			StopTime:   time.Now().Add(-time.Duration(pastSeconds) * time.Second), // Stopped in past
 		}
 

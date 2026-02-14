@@ -30,7 +30,7 @@ func TestWebCheckVerification(t *testing.T) {
 					Target: "10.100.1_.2",
 				},
 				Scheme: "http",
-				Url:    []urlData{{Path: "/", Status: 200}},
+				Url:    []UrlData{{Path: "/", Status: 200}},
 			},
 			expectError: false,
 		},
@@ -41,7 +41,7 @@ func TestWebCheckVerification(t *testing.T) {
 					Target: "10.100.1_.2",
 				},
 				Scheme: "https",
-				Url:    []urlData{{Path: "/admin", Status: 200}},
+				Url:    []UrlData{{Path: "/admin", Status: 200}},
 			},
 			expectError: false,
 		},
@@ -52,7 +52,7 @@ func TestWebCheckVerification(t *testing.T) {
 					Target: "10.100.1_.2",
 				},
 				Scheme: "http",
-				Url:    []urlData{},
+				Url:    []UrlData{},
 			},
 			expectError: true,
 			errorMsg:    "no urls defined",
@@ -65,7 +65,7 @@ func TestWebCheckVerification(t *testing.T) {
 					Port:   0,
 				},
 				Scheme: "http",
-				Url:    []urlData{{Path: "/"}},
+				Url:    []UrlData{{Path: "/"}},
 			},
 			expectError: false,
 		},
@@ -77,7 +77,7 @@ func TestWebCheckVerification(t *testing.T) {
 					Port:   0,
 				},
 				Scheme: "https",
-				Url:    []urlData{{Path: "/"}},
+				Url:    []UrlData{{Path: "/"}},
 			},
 			expectError: false,
 		},
@@ -140,7 +140,7 @@ func TestWebCheckRun(t *testing.T) {
 					Timeout: 5,
 				},
 				Scheme: "http",
-				Url:    []urlData{{Path: "/success", Status: 200}},
+				Url:    []UrlData{{Path: "/success", Status: 200}},
 			},
 			expectedStatus: true,
 		},
@@ -153,7 +153,7 @@ func TestWebCheckRun(t *testing.T) {
 					Timeout: 5,
 				},
 				Scheme: "http",
-				Url:    []urlData{{Path: "/admin", Regex: "Flag\\{[a-z0-9]+\\}"}},
+				Url:    []UrlData{{Path: "/admin", Regex: "Flag\\{[a-z0-9]+\\}"}},
 			},
 			expectedStatus: true,
 		},
@@ -166,7 +166,7 @@ func TestWebCheckRun(t *testing.T) {
 					Timeout: 5,
 				},
 				Scheme: "http",
-				Url:    []urlData{{Path: "/success", Status: 404}},
+				Url:    []UrlData{{Path: "/success", Status: 404}},
 			},
 			expectedStatus: false,
 			expectedError:  "status returned by webserver was incorrect",
@@ -180,7 +180,7 @@ func TestWebCheckRun(t *testing.T) {
 					Timeout: 5,
 				},
 				Scheme: "http",
-				Url:    []urlData{{Path: "/success", Regex: "NonExistentPattern"}},
+				Url:    []UrlData{{Path: "/success", Regex: "NonExistentPattern"}},
 			},
 			expectedStatus: false,
 			expectedError:  "didn't find regex on page",
@@ -438,10 +438,10 @@ func TestSshCheckVerification(t *testing.T) {
 // TestSimpleCheckVerification tests basic verification for check types with simple default port logic
 func TestSimpleCheckVerification(t *testing.T) {
 	tests := []struct {
-		name         string
-		serviceType  string
-		defaultPort  int
-		needsCreds   bool
+		name        string
+		serviceType string
+		defaultPort int
+		needsCreds  bool
 	}{
 		{"Tcp", "Tcp", 0, false},
 		{"Ping", "Ping", 0, false},
@@ -624,8 +624,8 @@ func TestSqlCheckVerification(t *testing.T) {
 // TestWinRMCheckVerification tests WinRM check configuration validation
 func TestWinRMCheckVerification(t *testing.T) {
 	tests := []struct {
-		name        string
-		check       *WinRM
+		name         string
+		check        *WinRM
 		expectedPort int
 	}{
 		{
@@ -724,7 +724,7 @@ func TestRunnerCreation(t *testing.T) {
 			checkData: Web{
 				Service: Service{Target: "10.100.1.2", Port: 80},
 				Scheme:  "http",
-				Url:     []urlData{{Path: "/"}},
+				Url:     []UrlData{{Path: "/"}},
 			},
 			expectError: false,
 		},

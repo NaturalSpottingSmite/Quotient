@@ -36,7 +36,7 @@ func TestWebRun_ActualExecution(t *testing.T) {
 						Timeout: 5,
 					},
 					Scheme: "http",
-					Url:    []urlData{{Path: "/", Status: 200}},
+					Url:    []UrlData{{Path: "/", Status: 200}},
 				}
 			}(0), // Port set later
 			expectedStatus: true,
@@ -54,7 +54,7 @@ func TestWebRun_ActualExecution(t *testing.T) {
 						Timeout: 5,
 					},
 					Scheme: "http",
-					Url:    []urlData{{Path: "/", Status: 200}},
+					Url:    []UrlData{{Path: "/", Status: 200}},
 				}
 			}(0),
 			expectedStatus: false,
@@ -74,7 +74,7 @@ func TestWebRun_ActualExecution(t *testing.T) {
 						Timeout: 5,
 					},
 					Scheme: "http",
-					Url:    []urlData{{Path: "/", Regex: `Flag\{[a-z0-9]+\}`}},
+					Url:    []UrlData{{Path: "/", Regex: `Flag\{[a-z0-9]+\}`}},
 				}
 			}(0),
 			expectedStatus: true,
@@ -93,7 +93,7 @@ func TestWebRun_ActualExecution(t *testing.T) {
 						Timeout: 5,
 					},
 					Scheme: "http",
-					Url:    []urlData{{Path: "/", Regex: `Flag\{[a-z0-9]+\}`}},
+					Url:    []UrlData{{Path: "/", Regex: `Flag\{[a-z0-9]+\}`}},
 				}
 			}(0),
 			expectedStatus: false,
@@ -111,7 +111,7 @@ func TestWebRun_ActualExecution(t *testing.T) {
 					Timeout: 2,
 				},
 				Scheme: "http",
-				Url:    []urlData{{Path: "/"}},
+				Url:    []UrlData{{Path: "/"}},
 			},
 			expectedStatus: false,
 			expectedError:  "web request errored out",
@@ -475,7 +475,7 @@ func TestServiceTimeout(t *testing.T) {
 				Timeout: 1, // 1 second timeout
 			},
 			Scheme: "http",
-			Url:    []urlData{{Path: "/"}},
+			Url:    []UrlData{{Path: "/"}},
 		}
 
 		resultsChan := make(chan Result, 1)
